@@ -1,0 +1,19 @@
+print "Welcome to Encryption Algorithm...!"
+key = input("Please enter the encryption key.. (a whole number): ")
+raw_message = raw_input("Input the message that you want to encrypt ")
+message = string.lower(raw_message)
+
+code = ""
+
+for letter in message:
+	if letter in string.lowercase:						
+		index = string.find(string.lowercase, letter)
+		number = str(index + key)							
+		code += "%s " % number							
+	else:
+		if letter == " ":
+                        code += " "
+		else:
+			code += "%s " % letter						
+		
+print code									
